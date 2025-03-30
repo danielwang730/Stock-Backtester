@@ -1,0 +1,6 @@
+Backtesting==0.3.3
+tulipy==0.4.0
+pandas==2.1.4
+numpy==1.26.4
+matplotlib==3.8.0
+dask==2023.11.0
