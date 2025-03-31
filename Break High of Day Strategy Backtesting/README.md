@@ -20,7 +20,7 @@ This strategy initiates a long position when a stock **breaks above the high of 
   Multiple take profit levels defined as `R-multiples` (risk-reward ratios), e.g., 1R, 2R, 3R.
 
 - **Breakeven (BE):**  
-  Created when pre-defined TP level is met; this acts as the new SL.
+  Created when a pre-defined TP level is met; this acts as the new SL.
 
 - **Exit Options:**  
   - Partial exits at each R-level
@@ -55,7 +55,7 @@ The position is scaled out using partial take profits at increasing R-multiples:
 
 Additionally:
 
-- **Stop-loss is moved to breakeven after 1st TP**
+- Stop-loss is moved to breakeven after 1st TP
 - No SL adjustment after 2nd or 3rd TP
 
 ---
@@ -86,7 +86,7 @@ Additionally:
   - Entry price + slippage
   - SL distance
   - Max capital constraint
-- Ensures that trade cost does not exceed the pre-defined max trade amount (`$50,000`)
+- Ensures that trade cost does not exceed the pre-defined max trade amount (default `$50,000`)
 
 ---
 
@@ -109,9 +109,12 @@ Each backtest generates:
 
 ## File Contents
 
-This folder contains:
-- Strategy logic implementation
-- Parameter dictionary
-- Trade simulator
-- Result aggregation scripts
-
+These folders contain:
+- Original event-driven backtester
+- Vectorized backtester (current version)
+  - Data wrangling and cleansing
+  - Parameter dictionary
+  - Trade simulator
+  - Result aggregation scripts
+  - Results from testing different stocks and time periods
+- Archive of previous iterations of strategy backtesters
